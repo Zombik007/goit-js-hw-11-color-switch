@@ -1,0 +1,39 @@
+* {
+  font-family: 'Lobster Two', cursive;
+  font-weight: 700;
+  font-size: 24px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+button {
+  outline: none;
+  padding: 5px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(180, 180, 180);
+}
+
+button:hover {
+  background-color: lightgray;
+}
+
+button[disabled] {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+button[disabled]:hover {
+  background-color: rgb(200, 180, 180);
+}
