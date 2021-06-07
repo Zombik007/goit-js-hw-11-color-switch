@@ -15,6 +15,9 @@ const stopBtn = pageButton[1];
 let intervalColorChange = null;
 
 startBtn.addEventListener('click', e => {
+  if (intervalColorChange !== null) {
+    return;
+  }
   intervalColorChange = setInterval(() => {
     pageColor.style.backgroundColor = colors[randomIntegerFromInterval(0, 5)];
   }, 1000);
@@ -23,6 +26,7 @@ startBtn.addEventListener('click', e => {
 
 stopBtn.addEventListener('click', () => {
   clearInterval(intervalColorChange);
+  intervalColorChange = null;
   startBtn.removeAttribute('disabled');
 });
 
