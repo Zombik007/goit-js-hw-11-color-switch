@@ -17,11 +17,12 @@ let intervalColorChange = null;
 startBtn.addEventListener('click', e => {
   if (intervalColorChange !== null) {
     return;
+  } else {
+    intervalColorChange = setInterval(() => {
+      pageColor.style.backgroundColor = colors[randomIntegerFromInterval(0, 5)];
+    }, 1000);
+    e.target.disabled = 'true';
   }
-  intervalColorChange = setInterval(() => {
-    pageColor.style.backgroundColor = colors[randomIntegerFromInterval(0, 5)];
-  }, 1000);
-  e.target.disabled = 'true';
 });
 
 stopBtn.addEventListener('click', () => {
